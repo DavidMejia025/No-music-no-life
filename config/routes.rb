@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  Rails.application.routes.draw do
-    root "landing#index"
-    devise_for :users
+  root "landing#index"
+  devise_for :users
 
-    resources :friendships
-  end
+  resources :users, only: [:show]
+  resources :friendships
 end
