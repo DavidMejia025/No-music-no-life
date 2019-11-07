@@ -1,0 +1,22 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "theme";
+@import "songs";
+@import "landing";
+
+.navbar-inverse {
+  border: 0;
+}
+
+// add this class to alerts to fix their position
+.alert-growl {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 500px;
+  z-index: 1000;
+}
+//
+// .concept{
+//   padding: 0 147px;
+// }

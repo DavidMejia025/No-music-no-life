@@ -5,16 +5,6 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-#loggin system
-gem 'devise'
 # Use application yml for env variables
 gem 'figaro'
 # PostgreSQL DB
@@ -23,13 +13,24 @@ gem 'pg'
 gem 'pg_search'
 # Httparty
 gem 'httparty'
-
-#get fake names to populate seeds
-gem 'faker'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # annotate db templates
 gem 'annotate'
+# Use SCSS for stylesheets
+gem 'bootstrap-sass', ">= 3.4.1"
+gem 'sass-rails', '~> 5.0'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# See https://github.com/rails/execjs#readme for more supported runtimes
+# gem 'mini_racer', platforms: :ruby
+gem 'devise'
+#get fake names to populate seeds
+gem 'faker'
+#get movies information
+gem 'themoviedb'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -53,6 +54,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :test do
+  gem "rspec-json_expectations"
+  gem "rspec-rails", "~> 3.8"
+  gem "rspec_junit_formatter"
+  gem 'simplecov'
+  gem 'simplecov-rcov'
+  gem 'shoulda-matchers'
+  gem 'factory_bot'
 end
 
 group :development do
