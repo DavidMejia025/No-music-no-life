@@ -5,7 +5,15 @@
         <div class="panel-heading">New Music</div>
         <div class="panel-body_index">
             <div class="movies_list">
-              
+              <% for user in User.all %>
+                <div class="user">
+                  <p>
+                    <strong><%=h user.email %></strong>
+                    <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+                    <div class="clear"></div>
+                  </p>
+                </div>
+              <% end %>
           </div>
         </div>
       </div>
